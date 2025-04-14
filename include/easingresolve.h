@@ -40,9 +40,7 @@ namespace tweeny {
 
         template<int I, typename TypeTuple, typename FunctionTuple, typename... Fs>
         struct easingresolve {
-            static void impl(FunctionTuple &b, Fs... fs) {
-                if (sizeof...(Fs) == 0) return;
-                easingresolve<I, TypeTuple, FunctionTuple, Fs...>::impl(b, fs...);
+            static void impl(FunctionTuple &, Fs... fs) {
             }
         };
 
