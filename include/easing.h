@@ -177,7 +177,7 @@ namespace tweeny {
              */
             static constexpr struct steppedEasing {
                 template<typename T>
-                static T run(float position, T start, T end) {
+                static T run(float /* position */ , T start, T /* end */) {
                     return start;
                 }
             } stepped = steppedEasing{};
@@ -214,7 +214,7 @@ namespace tweeny {
                 }
 
                 template<typename T>
-                static typename std::enable_if<!supports_arithmetic_operations<T>::value, T>::type run(float position, T start, T end) {
+                static typename std::enable_if<!supports_arithmetic_operations<T>::value, T>::type run(float /* position */, T start, T /* end */) {
                     return start;
                 }
             } def = defaultEasing{};

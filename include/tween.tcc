@@ -147,7 +147,7 @@ namespace tweeny {
 
     template<typename T, typename... Ts>
     template<typename... Fs>
-    tween <T, Ts...> & tween<T, Ts...>::via(const char * easing, Fs... vs) {
+    tween <T, Ts...> & tween<T, Ts...>::via(const char * easing, Fs... /* vs */) {
         return via(std::string(easing));
     }
 

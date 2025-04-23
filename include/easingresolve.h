@@ -40,7 +40,7 @@ namespace tweeny {
 
         template<int I, typename TypeTuple, typename FunctionTuple, typename... Fs>
         struct easingresolve {
-            static void impl(FunctionTuple &, Fs... fs) {
+            static void impl(FunctionTuple &, Fs... /* fs */) {
             }
         };
 
